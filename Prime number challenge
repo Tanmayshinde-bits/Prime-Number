@@ -1,0 +1,39 @@
+CODE:
+
+package prime;
+import java.util.Scanner;                                      //IMPORTING A JAVA LIBRARY
+
+public class Prime {                                          //INTIALIZATION OF CLASS PRIME
+
+        public static void main(String[] args) {
+        int number;
+        System.out.println("Enter a number");                  //TAKING A NUMBER AS INPUT
+        Scanner s = new Scanner(System.in);
+        number=s.nextInt();
+        boolean flag=false;                                 
+        for(int i =2;i<=number/2;i++)                          //INTIALIZATION OF FOR LOOP
+        {
+            if (number%2==0)                                   //CHECKING IF THE NUMBER IS DIVISIBLE BY 2
+                    {
+                        flag=true;                             // IF TRUE THEN NOT A PRIME NUMBER
+                        break;                                 //IF FALSE THEN IT IS A PRIME NUMBER
+                        
+                    }
+        }
+        if (!flag)
+            System.out.println("It is a prime number");            //FOR PRINTING OUT THE RESULT
+        else
+            System.out.println("It is not a prime number");
+        
+    }
+    
+}
+
+
+OUTPUT:
+
+Enter a number
+6
+It is not a prime number
+
+BUILD SUCCESSFUL (total time: 3 seconds)
